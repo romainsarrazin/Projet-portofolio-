@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Inclure Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="profile.jpg" alt="Photo de profil" class="profile-photo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#edito">Accueil</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="edito">
+            <div class="carousel-container">
+                <button id="prev" class="carousel-button" type="button" title="Précédent"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                    <div class="carousel-item"><img src="image1.png" alt="Stadium"></div>
+                    <div class="carousel-item"><img src="image2.png" alt="House"></div>
+                    <div class="carousel-item"><img src="image3.png" alt="Car"></div>
+                </div>
+                <button id="next" class="carousel-button" type="button" title="Suivant"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        <section id="projets">
+            <h2>Projets</h2>
+            <div class="project-container">
+                <!-- Projet 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Rénovation éco-responsable de bureaux.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Un projet visant à rénover des espaces de bureaux vieillissants en utilisant des matériaux écologiques et des solutions énergétiques innovantes. L'objectif est de réduire l'empreinte carbone tout en créant un environnement de travail moderne et fonctionnel.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Extension d'un centre de logistique.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ce projet consiste à agrandir un centre de logistique existant pour répondre à l'augmentation de la demande. Il inclut la construction de nouvelles surfaces de stockage, ainsi que l'ajout de zones de traitement et de préparation de commandes optimisées.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Réaménagement d'un site industriel en zone d'activités.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p> Un projet de reconversion d'un site industriel désaffecté en un parc d'activités mixtes, intégrant bureaux, ateliers et espaces de coworking. Il met l'accent sur la modernisation des infrastructures tout en respectant les normes environnementales.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 4 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Construction d'un complexe hôtelier à faible consommation d'énergie.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Ce projet vise à construire un hôtel de luxe écologique, avec des systèmes de récupération d'eau de pluie et des panneaux solaires pour minimiser la consommation énergétique. Le design met l'accent sur le bien-être des clients tout en respectant l'environnement.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 5 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Aménagement d'un centre de formation en développement durable.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>La création d'un centre de formation spécialisé dans le développement durable. Ce projet comprend la construction de salles de cours, de laboratoires et d'espaces verts, tout en intégrant des solutions énergétiques vertes et des matériaux durables dans le bâtiment.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projet 6 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Transformation d'un entrepôt en centre commercial innovant.</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Un projet de reconversion d'un grand entrepôt en centre commercial moderne, offrant des espaces interactifs, des boutiques éphémères et des installations pour des événements. Le concept met l'accent sur l'expérience client immersive et l'utilisation de technologies de pointe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="prenom" name="prenom" required>
+                    <label for="prenom">Prénom</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="nom" name="nom" required>
+                    <label for="nom">Nom</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Adresse e-mail</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/votre_profil_instagram/" title="Instagram"><i class="fab fa-instagram"></i><span class="sr-only">Instagram</span></a>
+            <a href="https://twitter.com/votre_profil_twitter" title="Twitter"><i class="fab fa-twitter"></i><span class="sr-only">Twitter</span></a>
+            <a href="https://www.linkedin.com/in/votre_profil_linkedin/" title="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="sr-only">LinkedIn</span></a>
+        </div>
+        <p>&copy; 2024 Squad bachelor- Tous droits réservés</p>
+    </footer>
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="CSS Valide !" />
+            </a>
+        </p>
+    <script src="script.js"></script>
+</body>
+</html>

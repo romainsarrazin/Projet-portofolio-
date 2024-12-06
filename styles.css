@@ -1,0 +1,239 @@
+/* ===================== General Styles ===================== */
+body {
+    font-family: Arial, sans-serif; /* Définir la police de caractère */
+    margin: 0; /* Enlever la marge par défaut */
+    padding: 0; /* Enlever le padding par défaut */
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #ffffff; /* Couleur du texte en blanc */
+}
+
+/* ===================== Header Styles ===================== */
+header {
+    display: flex; /* Utiliser le Flexbox pour une mise en page flexible */
+    flex-direction: column; /* Aligner les éléments du header verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+    padding: 20px; /* Ajouter du padding autour du header */
+    background-color: #1f1f1f; /* Couleur de fond du header */
+}
+
+.logo-container {
+    margin-bottom: 20px; /* Ajouter de l'espace en bas du logo */
+}
+
+.profile-photo {
+    border-radius: 40%; /* Rendre la photo de profil circulaire */
+    width: 140px; /* Définir la largeur de la photo */
+    height: 160px; /* Définir la hauteur de la photo */
+}
+
+/* ===================== Navigation Styles ===================== */
+nav ul {
+    list-style: none; /* Enlever les puces des éléments de la liste */
+    display: flex; /* Utiliser Flexbox pour aligner les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments du menu */
+    padding: 0; /* Enlever le padding par défaut */
+}
+
+nav a {
+    color: white; /* Couleur des liens en blanc */
+    text-decoration: none; /* Enlever le soulignement des liens */
+    font-weight: bold; /* Rendre le texte des liens en gras */
+}
+
+/* ===================== Main Content Styles ===================== */
+main {
+    padding: 20px; /* Ajouter du padding autour du contenu principal */
+    text-align: center; /* Centrer le texte */
+}
+
+/* ===================== Carousel Styles ===================== */
+.carousel-container {
+    position: relative; /* Positionner le conteneur de manière relative pour le positionnement des boutons */
+    width: 100%;
+    max-width: 600px; /* Limiter la largeur maximale du carrousel */
+    margin: 0 auto; /* Centrer le carrousel horizontalement */
+    overflow: hidden; /* Masquer le contenu débordant */
+    border-radius: 10px; /* Ajouter des coins arrondis */
+}
+
+.carousel {
+    display: flex; /* Afficher les éléments du carrousel en ligne */
+    transition: transform 0.5s ease-in-out; /* Animation de transition pour le défilement */
+    height: 300px; /* Hauteur du carrousel */
+}
+
+.carousel-item {
+    min-width: 100%; /* Chaque élément occupe 100% de la largeur du carrousel */
+    box-sizing: border-box; /* Inclure les bordures dans la largeur/hauteur */
+}
+
+.carousel img {
+    width: 100%; /* L'image occupe toute la largeur du carrousel */
+    height: 100%; /* L'image occupe toute la hauteur du carrousel */
+    object-fit: cover; /* Couvrir toute la zone sans déformation de l'image */
+    border-radius: 10px; /* Ajouter des coins arrondis aux images */
+}
+
+.carousel-button {
+    position: absolute; /* Positionner les boutons de manière absolue */
+    top: 50%; /* Positionner verticalement au centre */
+    transform: translateY(-50%); /* Centrer verticalement le bouton */
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond semi-transparente */
+    border: none; /* Enlever les bordures */
+    border-radius: 50%; /* Rendre les boutons circulaires */
+    cursor: pointer; /* Changer le curseur au survol */
+    font-size: 24px; /* Taille de la police */
+    width: 40px; /* Largeur du bouton */
+    height: 40px; /* Hauteur du bouton */
+    display: flex;
+    align-items: center; /* Centrer l'icône horizontalement */
+    justify-content: center; /* Centrer l'icône verticalement */
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Changer la couleur au survol */
+}
+
+#prev {
+    left: 10px; /* Placer le bouton précédent à gauche */
+}
+
+#next {
+    right: 10px; /* Placer le bouton suivant à droite */
+}
+
+/* ===================== Project Container Styles ===================== */
+.project-container {
+    display: flex; /* Utiliser Flexbox pour afficher les projets en ligne */
+    flex-wrap: wrap; /* Permettre le retour à la ligne pour les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* ===================== Flip Card Styles ===================== */
+.flip-card {
+    background-color: transparent; /* Pas de fond pour le flip card */
+    width: calc(33.333% - 40px); /* Chaque carte prend un tiers de la largeur de l'écran avec des marges */
+    height: 200px; /* Hauteur de chaque carte */
+    perspective: 1000px; /* Donner de la profondeur à l'effet 3D */
+    box-sizing: border-box; /* Inclure les bordures dans la largeur/hauteur */
+}
+
+.flip-card-inner {
+    position: relative; /* Positionner l'intérieur de la carte */
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Centrer le texte à l'intérieur de la carte */
+    transition: transform 0.6s; /* Animation pour l'effet de flip */
+    transform-style: preserve-3d; /* Maintenir l'effet 3D lors du flip */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Tourner la carte de 180 degrés lors du survol */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute; /* Positionner les faces de la carte de manière absolue */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Cacher la face arrière lors du flip */
+    display: flex;
+    align-items: center; /* Centrer les éléments à l'intérieur */
+    justify-content: center; /* Centrer les éléments à l'intérieur */
+    background-color: #333; /* Couleur de fond de la face avant */
+    border: 1px solid #555; /* Bordure de la face */
+    border-radius: 10px; /* Coins arrondis */
+    color: white; /* Couleur du texte */
+}
+
+.flip-card-back {
+    background-color: #444; /* Couleur de fond de la face arrière */
+    transform: rotateY(180deg); /* Positionner la face arrière à 180 degrés */
+}
+
+/* ===================== Footer Styles ===================== */
+footer {
+    background-color: #1f1f1f; /* Couleur de fond du footer */
+    color: white; /* Couleur du texte en blanc */
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Ajouter du padding autour du footer */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Espacement entre les icônes sociales */
+    color: white; /* Couleur des icônes en blanc */
+    font-size: 24px; /* Taille des icônes */
+    position: relative; /* Positionner de manière relative pour le survol */
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Changer la couleur des icônes au survol */
+}
+
+/* ===================== Accessibility Styles ===================== */
+.sr-only {
+    position: absolute; /* Positionner l'élément de manière absolue */
+    width: 1px; /* Largeur minimale */
+    height: 1px; /* Hauteur minimale */
+    padding: 0;
+    margin: -1px;
+    overflow: hidden; /* Cacher l'élément visuellement */
+    clip: rect(0, 0, 0, 0); /* Cacher l'élément */
+    border: 0; /* Enlever la bordure */
+}
+
+/* ===================== Form Styles ===================== */
+form {
+    display: flex; /* Utiliser Flexbox pour la disposition des éléments */
+    flex-direction: column; /* Disposer les éléments de façon verticale */
+    align-items: center; /* Centrer les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.form-group {
+    position: relative; /* Positionner les éléments du formulaire */
+    width: 100%;
+    max-width: 400px; /* Limiter la largeur du groupe de formulaire */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* Les champs de formulaire occupent toute la largeur */
+    padding: 10px; /* Ajouter du padding autour du texte dans les champs */
+    border: 1px solid #555; /* Bordure sombre pour les champs */
+    border-radius: 5px; /* Coins arrondis pour les champs */
+    background-color: #333; /* Couleur de fond des champs */
+    color: white; /* Couleur du texte des champs */
+}
+
+.form-group label {
+    position: absolute; /* Positionner l'étiquette de manière absolue */
+    top: 15px; /* Positionner en haut du champ */
+    left: 10px; /* Positionner à gauche du champ */
+    font-size: 12px; /* Taille de la police de l'étiquette */
+    color: #bbb; /* Couleur de l'étiquette */
+    pointer-events: none; /* Éviter que l'étiquette interagisse avec les clics */
+    transition: 0.3s; /* Animation lors de l'interaction */
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label {
+    top: -10px; /* Positionner l'étiquette au-dessus du champ lorsqu'il est en focus */
+    font-size: 10px; /* Réduire la taille de l'étiquette */
+    color: #fff; /* Changer la couleur de l'étiquette en blanc */
+}
+
+/* ===================== Media Queries ===================== */
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 100%; /* Prendre toute la largeur sur les petits écrans */
+    }
+
+    .project-container {
+        flex-direction: column; /* Afficher les projets en colonne sur mobile */
+    }
+
+    .flip-card {
+        width: 100%; /* Faire en sorte que les cartes prennent toute la largeur sur mobile */
+        height: 250px; /* Ajuster la hauteur des cartes sur mobile */
+    }
+}
